@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike | Enquiry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Nike Swoosh Logo" width="80" height="40">
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search products..." onkeypress="if(event.key === 'Enter') { window.location.href='products.html'; }">
+            <button type="button" onclick="window.location.href='products.html'">🔍</button>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h1>Product Enquiry Form</h1>
+            <p class="section-desc">Have a specific question regarding our gear? Fill out the form below.</p>
+            <form action="#" method="POST" onsubmit="alert('Enquiry submitted successfully!');">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="product-select">Select Product:</label>
+                <select id="product-select" name="product">
+                    <option value="hoodie">Nike Hoodie</option>
+                    <option value="bagpack">Nike BagPack</option>
+                    <option value="shoes">Nike Running Shoes</option>
+                    <option value="tshirt">Nike Tshirt</option>
+                </select>
+
+                <label for="message">Enquiry Details:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="cta-button">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nike, Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
